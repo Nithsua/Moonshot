@@ -3,14 +3,17 @@
 //  Moonshot
 //
 //  Created by Nivas Muthu M G on 05/07/21.
-//
 
+//
 import SwiftUI
 
 struct ContentView: View {
+    let astronauts: [Astronaut] = Bundle.main.decode("Astronauts.json")
+    let missions: [Mission] = Bundle.main.decode("Missions.json")
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("\(astronauts.count)")
+        Text("\(missions.count)")
     }
 }
 
